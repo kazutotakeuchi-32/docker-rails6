@@ -1,24 +1,15 @@
-# README
+## Usage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+``` zsh
+# プロジェクト作成
+  docker-compose run app rails new app  --force  --database=mysql  --webpacker
+# ビルド
+  docker-compose build
+# webpacker insatall
+  docker-compose run app rails webpacker:install
+# DB作成
+  docker-compose run app rails db:create
+#  起動
+  docker-compose run app bin/webpack-dev-server
+  docker-compose　up
+```

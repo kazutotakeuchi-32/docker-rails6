@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y curl apt-transport-https wget
 # Node.jsをインストール
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
 apt-get install nodejs
-
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile /app/Gemfile
